@@ -10,6 +10,7 @@ import 'package:hive/hive.dart';
 void main() async {
   Hive.init("/home/soumshahid/Flutter Projects/demo_api/local_data");
   var state = LocalDatabase();
+  
   ////////////////////////////////////// Start Routes ////////////////////////////////////
   final app = Router()
     ..get("/", (Request req) {
