@@ -16,9 +16,12 @@ void main() async {
       return Response.ok("Welcome",
           headers: {HttpHeaders.contentTypeHeader: "application/json"});
     })
-    ..get("/intro", (Request request) {
-      return Response.ok(jsonEncode(
-          {"Intoduction": "My name is Soum Shahid. I am flutter developer"}));
+    .get("/intro", (Request request) {
+      return Response.ok(
+          jsonEncode({
+            "Intoduction": "My name is Soum Shahid. I am flutter developer"
+          }),
+          headers: {HttpHeaders.contentTypeHeader: "application/json"});
     })
     ..get("/api/", (Request req) {
       return Response.ok(
